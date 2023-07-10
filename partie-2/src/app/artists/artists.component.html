@@ -1,0 +1,7 @@
+<div *ngFor="let artist of artists">
+  <a [routerLink]="['/artists', artist.id, 'albums']">
+    <img [src]="artist.images[0].url" [alt]="artist.name" />
+    <h3>Nom : {{ artist.name }}</h3>
+    <p>Followers : {{ artist.followers.total | number : "1.0-0" }}</p>
+  </a>
+</div>

@@ -1,0 +1,8 @@
+<div *ngFor="let album of albums">
+  <a [routerLink]="['/artists', album.artists[0].id, 'albums']">
+    <img [src]="album.images[0].url" [alt]="album.name" />
+    <h3>Nom de l'album : {{ album.name }}</h3>
+    <p>Date de sortie : {{ album.release_date }}</p>
+    <p>Nombre de pistes : {{ album.total_tracks }}</p>
+  </a>
+</div>

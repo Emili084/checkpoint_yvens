@@ -32,6 +32,16 @@ const scores = [
 
 function getPoints(array) {
   // Your code here !
+  let points = 0;
+  for (const score of array) {
+    const [ourScore, theirScore] = score.split(":");
+    if (ourScore > theirScore) {
+      points += 3;
+    } else if (ourScore === theirScore) {
+      points += 1;
+    }
+  }
+  return points;
 }
 
 console.log(getPoints(scores));

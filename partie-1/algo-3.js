@@ -18,6 +18,13 @@ Au final la liste devra ressembler à :
 
 function theaterSieges() {
   // Your code here !
+  let result = "";
+  for (let i = 1; i <= 26; i++) {
+    for (let j = 1; j <= 100; j++) {
+      result += `${i}-${j}\n`;
+    }
+  }
+  return result;
 }
 
 console.log(theaterSieges());
